@@ -1,0 +1,7 @@
+{
+    "DATABASE_URL": "mysql://root:rootroot@localhost:3306/buaa",
+    "MONITORING_TIME": 5,
+    "MACHINE_INFO_TYPE":"storage",
+    "SERVER_PORT":8834,
+    "LISTENER_PATH":""
+}

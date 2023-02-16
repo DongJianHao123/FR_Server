@@ -2,9 +2,10 @@ import { createRequire } from "module";
 import { fileURLToPath } from "url";
 import config from "./config.js";
 import bodyParser from "body-parser";
-import userRouter from "./router/userRouter.js";
 import performanceRouter from "./performancePc/performanceRouter.js";
 import signWrapRouter from "./signWrap/signWrapRouter.js";
+import proteinRouter from "./infoProtein/infoProteinRouter.js";
+import sirtRouter from "./infoSirt/infoSirtRouter.js";
 
 const require = createRequire(import.meta.url);
 const filename = fileURLToPath(import.meta.url);
@@ -27,9 +28,10 @@ app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 //router
-app.use('/user', userRouter)
 app.use('/performance_pc', performanceRouter)
 app.use('/sign', signWrapRouter)
+app.use('/protein', proteinRouter)
+app.use('/sirt', sirtRouter)
 
 
 app.post("/sign_in", (req, res) => {
@@ -40,9 +42,6 @@ app.post("/sign_in", (req, res) => {
 
 app.listen(port, function () {
   console.log("服务器已启动:");
-  console.log("-------------------此窗口不要关闭-------------");
-  console.log("");
   console.log("http://localhost:" + port + "/ ");
-  console.log("浏览器内打开网址以启动服务");
   console.log("--------------------------------------------");
 });

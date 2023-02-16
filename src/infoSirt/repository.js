@@ -1,25 +1,22 @@
 import prisma from "../db.js";
 
-const signWrapRepository = {
+const sirtRepository = {
     save: async (data) => {
         try {
-            const createFile = await prisma.signinWrap
+            const createFile = await prisma.info_sirt
                 .create({
                     data: data,
                 })
                 .catch((error) => {
                     console.error("prisma.info_txt.create error: ", error);
                 });
-            console.log("本次性能指标信息已存入mysql:");
+            console.log("本次Sirt信息已存入mysql:");
             console.log(createFile);
             return createFile;
         } catch (error) {
             return { code: 500, error }
         }
     },
-    saveMany: async (data) => {
-    
-    }
 }
 
-export default signWrapRepository 
+export default sirtRepository 

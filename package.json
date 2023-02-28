@@ -38,7 +38,7 @@
         "build": "vite build",
         "postinstall": "npx prisma migrate dev --name init",
         "prestart": "npx prisma generate",
-        "pkg": "pkg -t win package.json"
+        "pkg": "pkg -t linux package.json"
     },
     "devDependencies": {
         "@types/node": "^18.6.2",

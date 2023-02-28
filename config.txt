@@ -2,6 +2,6 @@
     "DATABASE_URL": "mysql://root:rootroot@192.168.31.2:3306/buaa",
     "MONITORING_TIME": 5,
     "MACHINE_INFO_TYPE":"storage",
-    "SERVER_PORT":8834,
+    "SERVER_PORT":8835,
     "LISTENER_PATH":""
 }
